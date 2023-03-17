@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Navigate, Route, Routes } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
+import Header from './components/base/header/header.component';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Header></Header>
+        <Routes>
+          <Route path="/" element={<Navigate to="/login" replace />} />
+          {/* <Route path="/home" element={<HomePage />} /> */}
+          {/* <Route path="/login" element={<LoginPage />} /> */}
+          {/* <Route path="/machines" element={<AuthGuard><MachinesPage /></AuthGuard>} /> */}
+          {/* <Route path="/manage-food" element={<AuthGuard><ManageFoodPage /></AuthGuard>} /> */}
+          {/* <Route path="/management" element={<AuthGuard><Navigate to="/management/dashboard" /></AuthGuard>} /> */}
+          {/* <Route path="/management/:section" element={<AuthGuard><ManagementPage /></AuthGuard>} /> */}
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
