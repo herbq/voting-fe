@@ -11,6 +11,7 @@ import useLogin from "../../../hooks/login.hook";
 
 const LoginForm = () => {
   const { inputs, others } = useLogin();
+  console.log(`env`, process.env.REACT_APP_BACKEND);
 
   return (
     <div className="form-container">
