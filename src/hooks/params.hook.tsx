@@ -18,11 +18,15 @@ const useParams = (key: string) => {
         return value || ''
     }
 
+    const toggleParam = () => {
+        setParam((!(getParam() == `true`)).toString())
+    }
+
     const compare = (str?: string) => {
         return str?.toLowerCase().includes(getParam().toLowerCase());
     }
 
-    return [getParam(), setParam, compare] as const
+    return [getParam(), setParam, compare, toggleParam] as const
 }
 
 export default useParams;

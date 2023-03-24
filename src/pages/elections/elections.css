@@ -1,0 +1,53 @@
+.elections-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.elections-container > .header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    top: 0px;
+    right: 10px;
+}
+
+.elections-page .elections-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 28%;
+    height: fit-content;
+    margin-top: 80px;
+}
+
+.elections-page .elections-container .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.elections-page .elections-container .section > p {
+    position: relative;
+    top: 4px;
+    font-size: 20px;
+    font-weight: 600;
+    /* margin-top: 40px; */
+    margin-top: 35px;
+}
+
+.elections-page .elections-container .section:nth-child(2) > p {
+    margin-top: 0px;
+}
+
+.elections-page .elections-container .election-card {
+    margin-top: 25px;
+}
